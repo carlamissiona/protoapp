@@ -13,10 +13,13 @@ var app = module.exports = loopback();
 app.start = function() {
   // start the web server
   return app.listen(port,ip, function() {
-    console.log(process);
+
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
+    console.log(process);
+    console.log("======================")
+    console.log(process.env);
     if (app.get('loopback-component-explorer')) {
       var explorerPath = app.get('loopback-component-explorer').mountPath;
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);

@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "start": "node server.js",
     "posttest": "npm run lint && nsp check"
-  }, 
+  },
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",

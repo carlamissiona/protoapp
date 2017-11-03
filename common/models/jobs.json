@@ -1,0 +1,26 @@
+{
+  "name": "jobs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "qualifications": {
+      "type": "string",
+      "required": true
+    },
+    "client": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,13 +1,13 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "main": "server/server.js",
+  "main": "server.js",
   "engines": {
     "node": ">=4"
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node server/server.js",
+    "start": "node server.js",
     "posttest": "npm run lint && nsp check"
   }, 
   "dependencies": {

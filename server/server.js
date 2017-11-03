@@ -9,7 +9,7 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     mongoURLLabel = "";
 
 var app = module.exports = loopback();
- 
+app.listen(port,ip);
 app.start = function() {
   // start the web server
   return app.listen(function() {
@@ -25,7 +25,7 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-app.listen(port,ip);
+
 boot(app, __dirname, function(err) {
   if (err) throw err;
 

@@ -9,10 +9,10 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     mongoURLLabel = "";
 
 var app = module.exports = loopback();
-app.listen(port,ip);
+ 
 app.start = function() {
   // start the web server
-  return app.listen(function() {
+  return app.listen(port , ip function() {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
